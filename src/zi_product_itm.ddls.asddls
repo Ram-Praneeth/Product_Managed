@@ -19,6 +19,9 @@ define view entity Zi_Product_Itm
       waers,
       @Semantics.amount.currencyCode: 'waers'
       dmbtr,
+
+      //local ETag field --> OData ETag
+      @Semantics.systemDateTime.localInstanceLastChangedAt: true
       last_changed_at,
 
       hdr // Header Association
