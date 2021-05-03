@@ -3,10 +3,12 @@
 {
 "FROM":
 [
-"ZPROD_HDR"
+"ZPRODUCT_HDR"
 ],
 "ASSOCIATED":
-[],
+[
+"ZI_PRODUCT_ITM"
+],
 "BASE":
 [],
 "ANNO_REF":

@@ -6,7 +6,7 @@
     <DDLNAME>ZI_PRODUCT_HDR</DDLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
     <DDTEXT>Product Header Interface view</DDTEXT>
-    <SOURCE_TYPE>V</SOURCE_TYPE>
+    <SOURCE_TYPE>W</SOURCE_TYPE>
    </DDLS>
   </asx:values>
  </asx:abap>

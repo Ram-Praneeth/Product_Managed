@@ -1,10 +1,8 @@
-@AbapCatalog.sqlViewName: 'ZI_PRODUCT_ITM_V'
-@AbapCatalog.compiler.compareFilter: true
-@AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Product Item Interface view'
-define view Zi_Product_Itm
+define view entity Zi_Product_Itm
   as select from ZPRODUCT_ITM_TABF
+  association to parent ZI_PRODUCT_HDR as hdr on $projection.itemid = hdr.Itemid
 {
   key itemid,
       itemname,
@@ -18,9 +16,10 @@ define view Zi_Product_Itm
       warranty_yrs,
       werks,
       lgort,
-      @Semantics.currencyCode: true
       waers,
       @Semantics.amount.currencyCode: 'waers'
       dmbtr,
-      last_changed_at
+      last_changed_at,
+
+      hdr // Header Association
 }
