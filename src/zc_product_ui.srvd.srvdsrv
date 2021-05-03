@@ -1,0 +1,5 @@
+@EndUserText.label: 'Product SD'
+define service ZC_PRODUCT_UI {
+  expose ZC_PRODUCT_HDR as PRDHDR;
+  expose ZC_PRODUCT_ITM as PRDITM;
+}

@@ -16,9 +16,17 @@ define view entity Zi_Product_Itm
       warranty_yrs,
       werks,
       lgort,
+
       waers,
       @Semantics.amount.currencyCode: 'waers'
       dmbtr,
+
+      @Semantics.text: true
+      case stock_status
+         when 'Immediate goods' then 3
+         when 'Marginal goods' then 1
+         when  'High-value goods' then 5
+         else 0 end as stockStatusCriticality,
 
       //local ETag field --> OData ETag
       @Semantics.systemDateTime.localInstanceLastChangedAt: true
